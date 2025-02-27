@@ -102,6 +102,9 @@ a{
     left: 50px;
 }
 
+.nav__search{
+    cursor: pointer;
+}
 
 .nav__settings, .nav__search{
     font-weight: 900;
