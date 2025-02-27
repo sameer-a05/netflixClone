@@ -12,18 +12,16 @@ searchIcon.addEventListener("click", (event) => {
 
   movieTitle.innerHTML = `"${searchInput.value}"`;
   moviesList.innerHTML = `<i class="fa-solid fa-spinner movies-list-spinner spinner-visible"></i>`;
-  setTimeout(() => {
-      renderMovies();
-  }, 1500)
+  
 
   renderMovies(navInput.value);
   movieSearchInput();
 
-  console.log("event ran");
+  
 });
 
 navInput.addEventListener("keypress", (event) => {
-  console.log("event ran");
+  
 
   if (event.key == "Enter") {
     const moviesList = document.querySelector(".movies__list");
@@ -31,9 +29,7 @@ navInput.addEventListener("keypress", (event) => {
 
     movieTitle.innerHTML = `"${searchInput.value}"`;
     moviesList.innerHTML = `<i class="fa-solid fa-spinner movies-list-spinner spinner-visible"></i>`;
-    setTimeout(() => {
-      renderMovies();
-    }, 1500);
+    
 
     renderMovies(navInput.value);
     movieSearchInput();
@@ -41,7 +37,7 @@ navInput.addEventListener("keypress", (event) => {
 });
 
 movieInput.addEventListener("keypress", (event) => {
-  console.log("event ran");
+ 
 
   if (event.key == "Enter") {
     const moviesList = document.querySelector(".movies__list");
@@ -49,9 +45,7 @@ movieInput.addEventListener("keypress", (event) => {
 
     movieTitle.innerHTML = `"${movieInput.value}"`;
     moviesList.innerHTML = `<i class="fa-solid fa-spinner movies-list-spinner spinner-visible"></i>`;
-    setTimeout(() => {
-      renderMovies();
-    }, 1500);
+    
 
     renderMovies(movieInput.value);
     movieSearchInput();
@@ -64,6 +58,7 @@ movieSearchIcon.addEventListener("click", (event) => {
   const moviesList = document.querySelector(".movies__list");
   const movieTitle = document.querySelector(".movies__search--result");
 
+  moviesList.innerHTML = `<i class="fa-solid fa-spinner movies-list-spinner spinner-visible"></i>`
   movieTitle.innerHTML = `"${searchInput.value}"`;
 
   renderMovies(movieInput.value);
@@ -109,7 +104,7 @@ async function renderMovies(value) {
     })
     .join("");
 
-  console.log(moviesList);
+  
 
   document.querySelector(".movies__list").innerHTML = moviesList;
 }
