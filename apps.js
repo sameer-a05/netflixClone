@@ -22,7 +22,6 @@ searchIcon.addEventListener("click", (event) => {
 
 navInput.addEventListener("keypress", (event) => {
   
-
   if (event.key == "Enter") {
     const moviesList = document.querySelector(".movies__list");
     const movieTitle = document.querySelector(".movies__search--result");
