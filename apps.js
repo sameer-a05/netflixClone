@@ -10,7 +10,7 @@ searchIcon.addEventListener("click", (event) => {
   const moviesList = document.querySelector(".movies__list");
   const movieTitle = document.querySelector(".movies__search--result");
 
-  movieTitle.innerHTML = `"${searchIcon.value}"`;
+  movieTitle.innerHTML = `"${navInput.value}"`;
   moviesList.innerHTML = `<i class="fa-solid fa-spinner movies-list-spinner spinner-visible"></i>`;
   
 
@@ -52,13 +52,12 @@ movieInput.addEventListener("keypress", (event) => {
 });
 
 movieSearchIcon.addEventListener("click", (event) => {
-  console.log("event ran");
-
+  
   const moviesList = document.querySelector(".movies__list");
   const movieTitle = document.querySelector(".movies__search--result");
 
   moviesList.innerHTML = `<i class="fa-solid fa-spinner movies-list-spinner spinner-visible"></i>`
-  movieTitle.innerHTML = `"${searchInput.value}"`;
+  movieTitle.innerHTML = `"${movieInput.value}"`;
 
   renderMovies(movieInput.value);
   movieSearchInput();
